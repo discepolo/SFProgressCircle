@@ -40,8 +40,9 @@
     
     _progressView = [[SFCircleGradientView alloc] initWithFrame:(CGRect){0, 0, 240, 240}];
     [_progressView setCenter:self.view.center];
-    [_progressView setLineWidth:6];
+    [_progressView setLineWidth:12];
     [_progressView setProgress:0];
+    [_progressView setRoundCap:YES];
     [self.view addSubview:_progressView];
     
     _titleLabel = [[UILabel alloc] initWithFrame:(CGRect){0, 0, 100, 30}];

@@ -108,6 +108,12 @@
     _gradientLayer.endAngle = endAngle;
 }
 
+-(void)setRoundCap:(BOOL)roundCap{
+    _roundCap = roundCap;
+    _gradientLayer.roundCap = roundCap;
+    [self updateLayerData:self.frame];
+}
+
 - (void)updateLayerData:(CGRect)frame
 {
     int numSegments = 16;
@@ -118,6 +124,8 @@
     _gradientLayer.numSegments = numSegments;
     _gradientLayer.circleRadius = circleRadius;
     _gradientLayer.circleWidth = circleWidth;
+    _gradientLayer.roundCap = _roundCap;
+    
 }
 
 - (void)layoutSubviews
